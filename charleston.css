@@ -188,3 +188,10 @@ a, p {
   float: right;
   object-fit: contain;
 }
+
+.quote {
+  font-size: 18pt;
+  color: grey;
+  font-weight: 300;
+  text-align: left;
+}
