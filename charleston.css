@@ -30,7 +30,7 @@ body {
   color: white;
   display: inline-block;
   font-weight: 300;
-  text-shadow: 0px 2px 2px rgb(220, 220, 220, .8);
+  text-shadow: 0px 0px 10px rgb(255, 255, 255, .3);
   float: right;
 }
 
@@ -147,6 +147,8 @@ a, p {
   display: table;
   content: '';
   clear: both;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .column {
@@ -194,4 +196,25 @@ a, p {
   color: grey;
   font-weight: 300;
   text-align: left;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+.map {
+  position: relative;
+  left: 75px;
+}
+
+.post span {
+  font-family: roboto;
+  max-width: 200px;
+  font-weight: 100;
+  position: relative;
+  left: 50px;
 }
