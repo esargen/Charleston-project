@@ -71,6 +71,7 @@ body {
   font-weight: 300;
   float: right;
   transition: 2s ease;
+  z-index: 1;
 }
 
 #alpha {
@@ -156,7 +157,38 @@ h2 {
   cursor: pointer;
 }
 
+#sidenav {
+  width: 0%;
+  opacity: 0.0;
+  background-color: rgb(250, 250, 250, 0.6);
+  padding: 15px;
+  overflow: hidden;
+  display: flex;
+  position: absolute;
+  top: 100px;
+  transition: 2s ease;
+  z-index: 1;
+  height: 100px;
+}
 
+#sidenav ul {
+  position: absolute;
+  top: 75px;
+  display: block;
+}
+
+}
+#sidenav li {
+  font-size: 10pt;
+}
+
+#closenav {
+  position: absolute;
+  opacity: 0.0;
+  top: 20px;
+  left: 225px;
+  cursor: pointer;
+}
 
 h2:hover {
   font-size: 22pt;
