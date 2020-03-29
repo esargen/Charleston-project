@@ -21,6 +21,16 @@
       document.getElementById("subtitle").style.opacity = "0%";
       document.getElementById("navbar").style.opacity = "0%";
     }
+    function sideNav() {
+      document.getElementById("sidenav").style.width = "100%";
+      document.getElementById("sidenav").style.opacity = "0.6";
+      document.getElementById("closenav").style.opacity = "1.0";
+    }
+    function closeSideNav() {
+      document.getElementById("sidenav").style.width = "0%";
+      document.getElementById("sidenav").style.opacity = "0.0";
+      document.getElementById("closenav").style.opacity = "0.0";
+    }
   </script>
 </head>
 
@@ -34,10 +44,21 @@
 
     <div class="section clearfix" id="landing">
       <div class="wide">
+        <div id="sidenav">
+          <div>
+            <p id="closenav" onclick="closeSideNav()">X</p>
+            <p class="quote">Archive</h2>
+            <ul>
+              <li><a href="#0323">3.23.20</a></li>
+              <li><a href="#0327">3.27.20</a></li>
+            </ul>
+          </div>
+        </div>
         <div id="navbar">
           <ul>
-            <li>Archive</li>
+            <li onclick="sideNav()">Archive</li>
             <li><a href="sketchbank.html">Sketchbank</a></li>
+            <li><a href="#itinerary" onclick="openNav()">Itinerary</a></li>
             <li><a href="https://earth.google.com/web/@32.8115245,-79.949545,4.374847a,870.99425801d,35y,0h,45t,0r/data=ClEaTxJJCiUweDg4ZmU3YWY2NTZkMmIzYzU6MHhmMTcyM2E2OTIxOTc2MDhhGY2z6QjgZ0BAISRFZFjF_FPAKg44MTAgTWVldGluZyBTdBgCIAEoAg">Google Earth</a></li>
           </ul>
         </div>
