@@ -218,3 +218,20 @@ a, p {
   position: relative;
   left: 50px;
 }
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 75%;
+  }
+
+  image {
+    width: 50%;
+  }
+  .wrapper {
+    width: 100%;
+  }
+  .wrapper2 {
+    width: 100%;
+  }
+  }
+}
