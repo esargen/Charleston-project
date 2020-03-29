@@ -1,5 +1,33 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
-  width: 1247px;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: auto;
+  color: navy;
+  font-size: 12pt;
+  font-weight: 300;
+  font-style: italic;
+  text-decoration: none;
+  background-color: rgb(173, 216, 230, 0.3);
+  margin-bottom: 15px;
+  margin-left: 20px;
+  padding: 5px;
+}
+
+#footer a {
+  text-decoration: none;
 }
 
 .wrapper {
@@ -12,34 +40,52 @@ body {
   background-position: center;
   background-repeat: repeat-y;
   background-size: cover;
+  overflow-x: hidden;
 }
 
+.wide img {
+  width: 105%;
+  overflow: hidden;
+  position: relative;
+  bottom: 400px;
+  z-index: 1;
 
-.wrapper2 {
+}
+
+#wrapper2 {
+  transition: margin-top .5s;
   margin-bottom: 200px;
   background-image: url("stolenimage.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 #title {
-  font-family: roboto, sans-serif;
+  font-family: "Roboto Slab", serif;
   font-size: 60pt;
   color: white;
   display: inline-block;
   font-weight: 300;
-  text-shadow: 0px 0px 10px rgb(255, 255, 255, .3);
   float: right;
+  transition: 2s ease;
+}
+
+#alpha {
+  mask-mode: alpha;
 }
 
 #landing {
-  background-color: rgb(173, 216, 230, 0.9);
-  padding-top: 300px;
+  background-color: rgb(173, 216, 230);
+  padding-top: 200px;
   padding-bottom: 30px;
   padding-right: 20px;
+  transition: 2s ease;
 }
+
+
 
 .wide {
   display: block;
@@ -53,12 +99,13 @@ body {
 
 #subtitle {
   font-family: roboto, sans-serif;
-  font-size: 18pt;
-  color: grey;
-  font-weight: 400;
+  font-size: 16pt;
+  color: navy;
+  font-weight: 300;
   text-transform: uppercase;
   float: right;
   margin-right: 25px;
+  transition: 2s ease;
 }
 
 .indent {
@@ -71,27 +118,50 @@ body {
   display: table;
 }
 
-
-
 #todo {
   background-color: #454e71;
   font-family: roboto, sans-serif;
   color: white;
   display: block;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
-.itinerary {
+#todo .closebtn {
+  position: absolute;
+  top: 630px;
+  right: 45px;
+  transition: .75s ease;
+  color: white;
+  font-size: 30pt;
+  opacity: 0;
+  text-decoration: none;
+}
+
+#itinerary {
   margin-left: 100px;
   margin-top: 50px;
-  padding-top: 25px;
+  padding-top: 10px;
   padding-bottom: 50px;
+  height: 30px;
+  overflow-y: hidden;
+  transition: 1s ease;
 }
 
 h2 {
   font-weight: 300;
-  font-size: 24pt;
+  font-size: 20pt;
   text-transform: lowercase;
+  opacity: .8;
+  transition: .3s;
+  cursor: pointer;
+}
+
+
+
+h2:hover {
+  font-size: 22pt;
+  transition: .5s;
+  opacity: 1;
 }
 
 ol {
@@ -111,11 +181,53 @@ ol li::before {
   opacity: 0.3;
 }
 
-li {
+ol li {
   font-weight: 100;
   counter-increment: inst;
   display: block;
   line-height: 30pt;
+}
+
+ul {
+  background-color: rgb(250, 250, 250, 0);
+  position: relative;
+  bottom: 200px;
+  width: 100%;
+  transition: .2s ease;
+  z-index: 2;
+}
+
+ul:hover {
+  background-color: rgb(250, 250, 250, 0.5);
+  transition: .6s ease;
+}
+
+
+ul li {
+  background-color: rgb(250, 250, 250, 0.6);
+  font-family: "roboto", sans-serif;
+  text-transform: lowercase;
+  color: navy;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5%;
+  font-weight: 300;
+  margin: 5px;
+  transition: .2s ease;
+}
+
+ul li:hover {
+  background-color: rgb(250, 250, 250);
+  transform: scale(1.1);
+  transition: .5s ease;
+}
+
+ul a {
+  text-decoration: none;
+  font-family: "roboto", sans-serif;
+  text-transform: lowercase;
+  font-weight: 400;
+  color: navy;
 }
 
 h1 {
@@ -219,6 +331,27 @@ a, p {
   left: 50px;
 }
 
+#overlay {
+  background-color: rgb(173, 216, 230);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  animation: "blueTrans" 2s ease;
+}
+
+@keyframes blueTrans {
+  0% {
+    opacity: 1.0;
+  }
+  100% {
+    opacity: 0.0;
+  }
+
+
+}
+
 @media screen and (max-width: 600px) {
   .column {
     width: 75%;
@@ -232,6 +365,12 @@ a, p {
   }
   .wrapper2 {
     width: 100%;
+  }
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
   }
   }
 }
