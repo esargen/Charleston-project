@@ -23,3 +23,20 @@ function closeSideNav() {
   document.getElementById("sidenav").style.opacity = "0.0";
   document.getElementById("closenav").style.opacity = "0.0";
 }
+
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var post = this.nextElementSibling;
+      if (post.style.maxHeight){
+        post.style.maxHeight = "300px";
+      } else {
+        post.style.maxHeight = post.scrollHeight + "px";
+      }
+    });
+  }
+
+
