@@ -5,33 +5,7 @@
   <title>Charleston Community Center Project</title>
   <link href="charleston.css" type="text/css" rel="stylesheet" media="screen" />
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700&display=swap" rel="stylesheet">
-
-  <script>
-    function openNav() {
-      document.getElementById("itinerary").style.height = "425px";
-      document.getElementById("closebtn").style.opacity = "1.0";
-    }
-    function closeNav() {
-      document.getElementById("itinerary").style.height = "30px";
-      document.getElementById("closebtn").style.opacity = "0.0";
-    }
-    function blueTrans() {
-      document.getElementById("landing").style.height = "100%";
-      document.getElementById("title").style.opacity = "0%";
-      document.getElementById("subtitle").style.opacity = "0%";
-      document.getElementById("navbar").style.opacity = "0%";
-    }
-    function sideNav() {
-      document.getElementById("sidenav").style.width = "100%";
-      document.getElementById("sidenav").style.opacity = "0.6";
-      document.getElementById("closenav").style.opacity = "1.0";
-    }
-    function closeSideNav() {
-      document.getElementById("sidenav").style.width = "0%";
-      document.getElementById("sidenav").style.opacity = "0.0";
-      document.getElementById("closenav").style.opacity = "0.0";
-    }
-  </script>
+  <script src="charlestonscript.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -74,7 +48,7 @@
 
     <div id="todo">
       <div id="itinerary">
-        <h2 onclick="openNav()">The Itinerary</h2>
+        <h2 onclick="openNav()">The <span style='font-weight:100')>(planned)</span> Itinerary <span style='font-weight:100')>(bound to be rewritten)</span></h2>
         <a href="javascript:void(0)" id="closebtn" class="closebtn" onClick="closeNav()">&times;</a>
         <ol>
           <li class=" ">Site analysis</li>
@@ -93,12 +67,14 @@
 
 <div id="wrapper2">
   <br>
+
+  <button class="collapsible">Open Collapsible</button>
   <div class="post" id="0323">
     <div class="row">
       <div class="column">
         <div class="text">
           <div class="texte">
-            <h1 onclick="openPost()">3.23.20</h1>
+            <h1>3.23.20</h1>
             <p>The address for the community center is 810 Meeting Street, selected to be an “anchor” for the existing community in the face of massive housing development projects in the area that threaten it. The site is tucked between state highway 52 and i26, making noise pollution a concern.</p>
             <br>
             <p>The site has some notable neighbors. The International Longshoremen's Association Building is right next door, as well as the Charleston City Recreation Services, making this a very local-friendly corner of the city. Restaurants in the area range from the hyperlocal (see: Martha Lou’s Kitchen, a tiny Southern restaurant classified as "historic") to the very new (see: Butcher + Bee, a hip eatery with a glossy website that boasts locations in both Charleston and Nashville). The establishment immediately adjacent to the site, the Tattooed Moose, is called a local staple in some literature online (despite also being a permanent fixture in various tourist guides). A few churches and religious buildings are scattered around the neighborhood, and a large graveyard stretches behind the International Longshoremen's Association.
@@ -178,11 +154,13 @@
       </div>
     </div>
   </div>
-  <div class="post" onclick="openPost()" id="0327">
+
+  <button class="collapsible">Open Collapsible</button>
+  <div class="post" id="0327">
     <div class="row">
       <div class="text">
         <div class="texte">
-          <h1 onclick="openPost()">3.27.20</h1>
+          <h1>3.27.20</h1>
           <span>Today's work focused on a number of concrete construction precedents.</span>
         </div>
       </div>
@@ -311,6 +289,8 @@
 
 
   </div>
+
+  <button class="collapsible">Open Collapsible</button>
   <div class="post" id="0330">
     <div class="row">
       <div class="column">
@@ -376,13 +356,56 @@
           </div>
         </div>
       </div>
+      <div class="row">
+          <div class="text">
+            <div class="texte">
+              <p>These are iterative massing models made from homemade clay.</p>
+            </div>
+          </div>
+      </div>
+      <div class="row2">
+        <div class="column2">
+          <img class="smallimagee" src="mass (1).jpg" />
+          <img class="smallimagee" src="mass (3).jpg" />
+          <img class="smallimagee" src="mass (5).jpg" />
+        </div>
+        <div class="column2">
+          <img class="smallimagee" src="mass (2).jpg" />
+          <img class="smallimagee" src="mass (4).jpg" />
+          <img class="smallimagee" src="mass (6).jpg" />
+        </div>
+        <div class="column2">
+          <img class="smallimagee" src="mass (7).jpg" />
+          <img class="smallimagee" src="mass (8).jpg" />
+          <img class="smallimagee" src="mass (9).jpg" />
+        </div>
+        <div class="column2">
+          <img class="smallimagee" src="mass (10).jpg">
       </div>
     </div>
+  </div>
 
 
 
 
+  <script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
 
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var post = this.nextElementSibling;
+      if (post.style.maxHeight){
+        post.style.maxHeight = "300px";
+      } else {
+        post.style.maxHeight = post.scrollHeight + "px";
+      }
+    });
+  }
+
+
+  </script>
 
 </body>
 
