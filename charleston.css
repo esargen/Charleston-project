@@ -266,8 +266,8 @@ ul li, .collapsible {
 
 .collapsible {
   position: relative;
-  top: 450px;
-  left: 1000px;
+  top: 255px;
+  left: 107px;
   opacity: 1.0;
 }
 
@@ -343,7 +343,7 @@ a, p {
 .image {
   overflow: hidden;
   max-width: inherit;
-  width: 100%;
+  max-width: 100%;
   max-height: 500px;
   object-fit: scale-down;
   margin-top: 25px;
@@ -368,6 +368,11 @@ a, p {
   width: 100%;
   float: right;
   object-fit: contain;
+}
+
+.imageheight {
+  float: left;
+  max-width: 100%;
 }
 
 .smallimagee {
@@ -434,6 +439,24 @@ a, p {
   width: 100%;
 }
 
+.column3 {
+  margin-left: 50px;
+  margin-right: 50px;
+  flex: 85%;
+  max-width: 85%;
+}
+
+.column3 img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.caption {
+  font-size: 10pt;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+  color: navy;
+}
 
 @keyframes blueTrans {
   0% {
