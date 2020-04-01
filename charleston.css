@@ -31,15 +31,7 @@ body {
 }
 
 .wrapper {
-  /* The image used */
-  background-image: url("moose.jpg");
-
-  /* Set a specific height */
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: repeat-y;
-  background-size: cover;
+  background-color: white;
   overflow-x: hidden;
 }
 
