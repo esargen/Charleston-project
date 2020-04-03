@@ -31,7 +31,15 @@ body {
 }
 
 .wrapper {
-  background-color: white;
+  /* The image used */
+  background-image: url("moose.jpg");
+
+  /* Set a specific height */
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
   overflow-x: hidden;
 }
 
@@ -362,6 +370,16 @@ a, p {
   object-fit: contain;
 }
 
+.bigimage {
+  overflow: hidden;
+  max-width: inherit;
+  max-width: 60%;
+  object-fit: scale-down;
+  margin-top: 25px;
+  margin-right: 100px;
+  float: right;
+}
+
 .imageheight {
   float: left;
   max-width: 100%;
@@ -430,6 +448,7 @@ a, p {
   vertical-align: middle;
   width: 100%;
 }
+
 
 .column3 {
   margin-left: 50px;
