@@ -234,7 +234,7 @@ ol li {
   line-height: 30pt;
 }
 
-ul {
+.wrapper ul {
   background-color: rgb(250, 250, 250, 0);
   position: relative;
   bottom: 200px;
@@ -243,13 +243,13 @@ ul {
   z-index: 2;
 }
 
-ul:hover {
+.wrapper ul:hover {
   background-color: rgb(250, 250, 250, 0.5);
   transition: .6s ease;
 }
 
 
-ul li, .collapsible {
+.wrapper ul li, .collapsible {
   background-color: rgb(250, 250, 250, 0.6);
   font-family: "roboto", sans-serif;
   text-transform: lowercase;
@@ -271,13 +271,13 @@ ul li, .collapsible {
   opacity: 1.0;
 }
 
-ul li:hover {
+.wrapper ul li:hover {
   background-color: rgb(250, 250, 250);
   transform: scale(1.1);
   transition: .5s ease;
 }
 
-ul a {
+.wrapper ul a {
   text-decoration: none;
   font-family: "roboto", sans-serif;
   text-transform: lowercase;
@@ -293,7 +293,7 @@ h1 {
   text-transform: lowercase;
 }
 
-a, p {
+a, p, li {
   font-family: roboto, sans-serif;
   font-weight: 100;
   text-transform: none;
@@ -478,32 +478,4 @@ a, p {
   }
 
 
-}
-
-@media screen and (max-width: 600px) {
-  .column {
-    width: 75%;
-  }
-
-  image {
-    width: 50%;
-  }
-  .wrapper {
-    width: 100%;
-  }
-  .wrapper2 {
-    width: 100%;
-  }
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
-  }
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
 }
