@@ -232,6 +232,7 @@ ol li {
   counter-increment: inst;
   display: block;
   line-height: 30pt;
+  color: white;
 }
 
 .wrapper ul {
